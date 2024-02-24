@@ -61,6 +61,28 @@ public class SLinkedList {
 
     }
 
+    public void insertAfter(int nextTo, int data) {
+        // create a node class with data
+        // loop the list and find there is a value equals to nextTo
+        // if no return if yes change the assigned values of the nodes
+        // consider all other cases also (like next to becoming tail)
+
+        Node newNode = new Node(data);
+        Node temp = head;
+        while (temp != null && temp.data != nextTo) {
+            temp = temp.next;
+        }
+        if (temp == null) {
+            return;
+        }
+        if(temp == tail){
+            tail.next = newNode;
+            tail = newNode;
+        }
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
+
     public static void main(String[] args) {
         SLinkedList list = new SLinkedList();
         list.displayNode();
@@ -70,6 +92,7 @@ public class SLinkedList {
         list.addNode(2);
         list.addNode(100);
         list.delete(100);
+        list.insertAfter(9, 5);
 
         list.displayNode();
     }

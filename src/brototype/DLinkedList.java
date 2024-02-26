@@ -51,6 +51,40 @@ public class DLinkedList {
 
     }
 
+    public void delete(int data) {
+        Node tempNode = headNode, prevNode = null;
+        if (tempNode == null) {
+            return;
+        }
+
+        while (tempNode != null && tempNode.data != data) {
+            prevNode = tempNode;
+            tempNode = tempNode.next;
+        }
+        if (tempNode == null) {
+            return;
+        }
+
+        prevNode.next = tempNode.next;
+    }
+
+    public void insertAfter(int nextTo, int data) {
+        Node newNode = new Node(data);
+        Node temp = headNode;
+
+        while (temp != null && temp.data != nextTo) {
+            temp = temp.next;
+        }
+        if (temp == null) {
+            System.out.println("Nothing to insert after");
+            return;
+        }
+        newNode.next = temp.next;
+        temp.next = newNode;
+        newNode.previous = temp;
+
+    }
+
     public static void main(String[] args) {
         DLinkedList list = new DLinkedList();
         list.addNode(1);
@@ -58,8 +92,11 @@ public class DLinkedList {
         list.addNode(8);
         list.addNode(12);
         list.addNode(15);
-
+        // list.delete(8);
+        // list.insertAfter(15, 100);
+        // list.insertAfter(100, 100);
+        list.insertAfter(100, 5);
         list.displayNode();
-        list.displayNodeInReverse();
+        // list.displayNodeInReverse();
     }
 }

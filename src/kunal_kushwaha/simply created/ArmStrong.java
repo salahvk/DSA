@@ -1,11 +1,12 @@
 import java.util.Scanner;
-
+  // Armstrong problems like checking user entered number is armstrong and / enter the armstrong numbers between the limit
 public class ArmStrong {
     // Pseudocode
     // find the digits in a number
     // a number to store the sum of each number that raise to (total digits length)
     // 153 is an example
     public static void main(String[] args) {
+        System.out.println();
         System.out.println("Following is a program that checks whether the user entered number is armstrong or not");
         System.out.println("Enter a number");
         Scanner scanner = new Scanner(System.in);

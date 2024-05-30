@@ -1,3 +1,5 @@
+package kunal_kushwaha.simply_created;
+
 public class MaximumNumber {
     public static void main(String[] args) {
         int[] myArray = { 1, 5, 3, 9, 3 };

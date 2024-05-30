@@ -1,6 +1,9 @@
+package kunal_kushwaha.simply_created;
+
 import java.util.Scanner;
-  // Armstrong problems like checking user entered number is armstrong and / enter the armstrong numbers between the limit
-public class ArmStrong {
+
+// Armstrong problems like checking user entered number is armstrong and / enter the armstrong numbers between the limit
+public class Armstrong {
     // Pseudocode
     // find the digits in a number
     // a number to store the sum of each number that raise to (total digits length)

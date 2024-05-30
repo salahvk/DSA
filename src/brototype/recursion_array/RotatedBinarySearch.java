@@ -1,4 +1,4 @@
-package Recursion_array;
+package brototype.recursion_array;
 
 public class RotatedBinarySearch {
 

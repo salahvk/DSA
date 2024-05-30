@@ -1,3 +1,5 @@
+package kunal_kushwaha.simply_created;
+
 import java.util.Scanner;
 
 public class ReverseNumber {

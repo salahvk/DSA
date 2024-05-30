@@ -1,3 +1,5 @@
+package kunal_kushwaha.simply_created;
+
 public class PrimeNumber {
     public static void main(String[] args) {
         // checkWhetherPrimeorNot(20);
@@ -21,7 +23,7 @@ public class PrimeNumber {
 
     public static void printAllPrimeNumbersToLimit(int num) {
         for (int i = 2; i <= num; i++) {
-          checkWhetherPrimeorNot(i);
+            checkWhetherPrimeorNot(i);
         }
     }
 }

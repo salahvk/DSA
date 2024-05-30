@@ -1,4 +1,4 @@
-package Recursion_array;
+package brototype.recursion_array;
 
 import java.util.ArrayList;
 
@@ -28,3 +28,4 @@ public class FindTargetNumber {
         return findAllTargetIndexes(arr, target, ++index, list);
     }
 }
+

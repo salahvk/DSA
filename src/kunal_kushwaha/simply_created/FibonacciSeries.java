@@ -1,3 +1,5 @@
+package kunal_kushwaha.simply_created;
+
 public class FibonacciSeries {
 
     public static void main(String[] args) {

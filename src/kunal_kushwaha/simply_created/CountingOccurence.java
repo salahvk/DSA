@@ -1,8 +1,9 @@
-import java.util.Arrays;
-import java.util.Scanner;
+package kunal_kushwaha.simply_created;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Scanner;
 
 public class CountingOccurence {
     // Two problems where finding the most occured number and finding the occurence

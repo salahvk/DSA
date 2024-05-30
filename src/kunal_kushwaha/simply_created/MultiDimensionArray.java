@@ -1,3 +1,5 @@
+package kunal_kushwaha.simply_created;
+
 import java.util.Arrays;
 import java.util.Scanner;
 

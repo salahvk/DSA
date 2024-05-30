@@ -1,0 +1,36 @@
+arr = [5,6,7,8,10,12,13]
+first of all if we add a condition to check whether the target number is start or end the it will make the algorithm for complex (in case of big dataset it is unwanted condition if the target is not found)
+condition to check whether the target number is == mid
+condition to check whether the end is > start
+target = 7
+s = 5
+e = 12 
+m = 8
+s + (e-s)/2
+
+next end mid - 1 (because we already checked mid is target)
+it is 7 
+now new array = [5,6,7]
+new mid is 6
+then don't we need to check whether end is target ?
+because in this case start don't changed
+
+suppose if we don't look then we check whether target is greater or equal to mid
+if it is equal to mid it returns
+so it is greater 
+so the start became m + 1
+new array [6,7]
+start is 6 and end is 7
+
+m = 0 + (1-0)/2 == 0
+
+now again check whether mid is target no it is not because it is 6
+and change new start to s+1
+that is 7 
+so the new start is 7 it is also the end and the middle is also 7 
+so the condition that mid is equal to target returns
+
+and the first condition of while loop (check whether end is greater than start(In ascending)) that breaks
+
+every time new start or end would be m + 1 (for start) or (m - 1) for end
+and our target is to bring the orginal target to mid 

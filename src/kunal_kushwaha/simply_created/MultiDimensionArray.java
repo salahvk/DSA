@@ -19,9 +19,7 @@ public class MultiDimensionArray {
         System.out.println("User entry completed");
         System.out.println("Entered Numbers are");
         // Printing all the values
-        for (
-
-        int[] a : m_array) {
+        for (int[] a : m_array) {
             System.out.println(Arrays.toString(a));
         }
     }

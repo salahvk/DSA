@@ -13,7 +13,7 @@ public class FirstAndLastElement {
         System.out.println(Arrays.toString(searchRange(arr, target)));
     }
 
-    public static int[] searchRange(int[] nums, int target) {
+    public static int[] searchRange(int[] nums, int target) {   
         int[] ans = { -1, -1 };
         ans[0] = search(nums, target, true);
         ans[1] = search(nums, target, false);

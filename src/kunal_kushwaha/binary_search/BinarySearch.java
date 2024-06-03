@@ -7,7 +7,7 @@ public class BinarySearch {
     public static void main(String[] args) {
         int[] arr = { 3, 7, 8, 9, 11, 15, 18, 19, 24, 27, 30, 38, 45, 47, 49, 56, 798, 799 };
         // int[] arr1 = { 1, 2, 3 };
-        int target = 799;
+        int target = 798;
         findTargetPostion(arr, target);
     }
 
@@ -16,13 +16,13 @@ public class BinarySearch {
         int end = arr.length - 1;
         while (start <= end) {
             int mid = start + (end - start) / 2;
-            if (target == arr[mid]) {
-                System.out.println("Element Found at position " + mid);
-            }
             if (target > arr[mid]) {
                 start = mid + 1;
-            } else {
+            } else if(target < arr[mid]){
                 end = mid - 1;
+            }else{
+                System.out.println("Element Found at position " + mid);
+                break;
             }
             // System.out.println("Start:" + start + " End:" + end + " Mid" + mid);
         }

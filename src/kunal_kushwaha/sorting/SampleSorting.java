@@ -6,9 +6,11 @@ public class SampleSorting {
     public static void main(String[] args) {
         int[] unsorted = { 7, 3, 9, 15, 67, 1 };
         // System.out.println(Arrays.toString(bubbleSortAscending(unsorted)));
-        System.out.println(Arrays.toString(selectionSortAscending(unsorted)));
+        // System.out.println(Arrays.toString(selectionSortAscending(unsorted)));
+        System.out.println(Arrays.toString(insertionSort(unsorted)));
     }
 
+    // bubble sort
     public static int[] bubbleSortAscending(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 1; j < arr.length - i; j++) {
@@ -22,6 +24,7 @@ public class SampleSorting {
         return arr;
     }
 
+    // selection sort
     public static int[] selectionSortAscending(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             int end = arr.length - 1 - i;
@@ -42,9 +45,25 @@ public class SampleSorting {
         return maxIndex;
     }
 
-    public static void swap(int[] arr, int maxIndex, int end) {
+    // insertion sort
+    public static int[] insertionSort(int[] arr){
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = i+1; j > 0; j--) {
+                if (arr[j] < arr[j-1]) {
+                    swap(arr, j, j-1);
+                }else{
+                    break;
+                }
+            }
+        }
+        return arr;
+    }
+
+
+    // swap function
+    public static void swap(int[] arr, int start, int end) {
         int temp = arr[end];
-        arr[end] = arr[maxIndex];
-        arr[maxIndex] = temp;
+        arr[end] = arr[start];
+        arr[start] = temp;
     }
 }

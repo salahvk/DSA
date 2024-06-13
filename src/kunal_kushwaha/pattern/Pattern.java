@@ -4,7 +4,7 @@ package kunal_kushwaha.pattern;
 public class Pattern {
     public static void main(String[] args) {
         // pattern1(5);
-        pattern6(5);
+        pattern7(5);
     }
 
     static void pattern1(int nums) {
@@ -68,6 +68,19 @@ public class Pattern {
                     System.out.print("*");
                 }
 
+            }
+            System.err.println();
+        }
+    }
+
+    static void pattern7(int nums) {
+        for (int i = 0; i < nums; i++) {
+            for (int j = 1; j <= nums; j++) {
+                if(i >= j){
+                    System.out.print(" ");
+                }else{
+                    System.out.print("*");
+                }
             }
             System.err.println();
         }

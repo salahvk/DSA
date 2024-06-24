@@ -10,7 +10,11 @@ public class FindUnique {
         int unique = 0;
         for (var n : num) {
             unique ^= n;
+            System.out.println(n +" to binary " + Integer.toBinaryString(n));
+            System.out.println(unique+" unique to binary " + Integer.toBinaryString(unique));
         }
         return unique;
     }
 }
+
+// here in the xor take two 3's  both the binary values are same and thus the xor of both become zero

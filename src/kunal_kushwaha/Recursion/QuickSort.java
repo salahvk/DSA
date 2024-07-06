@@ -5,13 +5,14 @@ import java.util.Arrays;
 
 public class QuickSort {
     public static void main(String[] args) {
-        int[] arr = { 5, 4, 3, 2, 1 };
+        int[] arr = { 5, 4, 3, 1, 2};
         sort(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
         // Arrays.sort(arr);
     }
 
     static void sort(int[] nums, int low, int hi) {
+        System.out.println(Arrays.toString(nums));
         if (low >= hi) {
             return;
         }

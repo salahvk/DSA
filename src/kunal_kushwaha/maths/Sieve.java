@@ -39,13 +39,16 @@ public class Sieve {
 
         normalPrimeNumber(num - 1);
         int c = 2;
-        while (true) {
-            if (c * c <= num && num % c == 0) {
+        boolean isPrime = true;
+        while (c * c <= num) {
+            if (num % c == 0) {
+                isPrime = false;
                 break;
+
             }
             c++;
         }
-        if (c % 2 != 0) {
+        if (isPrime) {
             System.out.println(num);
         }
     }

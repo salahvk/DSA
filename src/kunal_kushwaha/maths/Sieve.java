@@ -1,35 +1,12 @@
 package kunal_kushwaha.maths;
 
-// public class Seive {
-//     public static void main(String[] args) {
-//         int n = 40;
-//         boolean[] primes = new boolean[n+1];
-//         sieve(n, primes);
-//     }
-
-//     // false in array means number is prime
-//     static void sieve(int n, boolean[] primes) {
-//         for (int i = 2; i*i <= n; i++) {
-//             System.out.println(i);
-//             if (!primes[i]) {
-//                 for (int j = i*2; j <= n; j+=i) {
-//                     System.out.println(j);
-//                     System.out.println("j");                    primes[j] = true;
-//                 }
-//             }
-//         }
-
-//         for (int i = 2; i <= n; i++) {
-//             if (!primes[i]) {
-//                 System.out.print(i + " ");
-//             }
-//         }
-//     }
-// }
-
 public class Sieve {
     public static void main(String[] args) {
-        normalPrimeNumber(40);
+        int num = 40;
+        // normalPrimeNumber(40);
+        boolean[] sieveNumbers = new boolean[num + 1];
+        sieve(num, sieveNumbers);
+        // sieveKunal(num, sieveNumbers);
     }
 
     public static void normalPrimeNumber(int num) {
@@ -50,6 +27,34 @@ public class Sieve {
         }
         if (isPrime) {
             System.out.println(num);
+        }
+    }
+
+    public static void sieve(int num, boolean[] sieveNumbers) {
+        for (int i = 2; i <= num; i++) {
+
+            if (!sieveNumbers[i]) {
+                System.out.println(i);
+                for (int j = i * 2; j < sieveNumbers.length; j += i) {
+                    sieveNumbers[j] = true;
+                }
+            }
+        }
+    }
+
+    static void sieveKunal(int n, boolean[] primes) {
+        for (int i = 2; i * i <= n; i++) {
+            if (!primes[i]) {
+                for (int j = i * 2; j <= n; j += i) {
+                    primes[j] = true;
+                }
+            }
+        }
+
+        for (int i = 2; i <= n; i++) {
+            if (!primes[i]) {
+                System.out.print(i + " ");
+            }
         }
     }
 }

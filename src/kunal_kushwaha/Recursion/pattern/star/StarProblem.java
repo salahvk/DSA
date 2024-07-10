@@ -1,4 +1,4 @@
-package kunal_kushwaha.Recursion.pattern.star;
+package kunal_kushwaha.recursion.pattern.star;
 
 public class StarProblem {
     public static void main(String[] args) {

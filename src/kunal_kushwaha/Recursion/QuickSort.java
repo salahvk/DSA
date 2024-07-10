@@ -1,5 +1,5 @@
 
-package kunal_kushwaha.Recursion;
+package kunal_kushwaha.recursion;
 
 import java.util.Arrays;
 

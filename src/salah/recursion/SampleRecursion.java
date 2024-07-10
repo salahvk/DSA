@@ -1,10 +1,12 @@
-package kunal_kushwaha.recursion;
+package salah.recursion;
 
 public class SampleRecursion {
     public static void main(String[] args) {
         // printNumbers(50);
         // System.out.println(factorial(10));
         // System.out.println(sumOfDigits(123456, 0));
+        // System.out.println(productOfNumbers(123456, 1));
+        System.out.println(reverseANumber(123456, 0));
     }
 
     public static void printNumbers(int num) {
@@ -26,6 +28,20 @@ public class SampleRecursion {
         if (num <= 0) {
             return sum;
         }
-        return sumOfDigits(num/10,sum + num%10);
+        return sumOfDigits(num / 10, sum + num % 10);
+    }
+
+    public static int productOfNumbers(int num, int product) {
+        if (num <= 0) {
+            return product;
+        }
+        return productOfNumbers(num / 10, product * (num % 10));
+    }
+
+    public static int reverseANumber(int num, int reversedNumber) {
+        if (num <= 0) {
+            return reversedNumber/10;
+        }
+        return reverseANumber(num / 10, (reversedNumber + num % 10) * 10);
     }
 }

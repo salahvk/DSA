@@ -11,7 +11,7 @@ public class Subset {
             return;
         }
         char firstChar = up.charAt(0);
-        subset(p, up.substring(1));
         subset(p + firstChar , up.substring(1));
+        subset(p, up.substring(1));       
     }
 }

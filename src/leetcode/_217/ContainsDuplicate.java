@@ -1,4 +1,5 @@
 package leetcode._217;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
@@ -17,10 +18,10 @@ public class ContainsDuplicate {
 
         HashMap<Character, Integer> map = new HashMap<>();
         // map.put(1, 100); we add maps like this
-//         String s = "dsg";
-//         for(char m : s.toCharArray()){
-// map.cont
-//         }
+        // String s = "dsg";
+        // for(char m : s.toCharArray()){
+        // map.cont
+        // }
 
         for (int i = 0; i < nums.length; i++) {
             if (uniques.contains(nums[i])) {

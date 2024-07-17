@@ -16,7 +16,7 @@ public class ContainsDuplicate {
         // hashset is a collection where it doesnt contain any duplicate numbers
         // HashSet: [1, 2, 3] hashset prints like this
 
-        HashMap<Character, Integer> map = new HashMap<>();
+        // HashMap<Character, Integer> map = new HashMap<>();
         // map.put(1, 100); we add maps like this
         // String s = "dsg";
         // for(char m : s.toCharArray()){

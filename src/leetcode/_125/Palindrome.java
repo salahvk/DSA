@@ -5,6 +5,7 @@ public class Palindrome {
         System.out.println(isPalindrome("A man, a plan, a canal: Panama"));
     }
 
+    // it uses default functions
     static Boolean isPalindrome(String name) {
         String convertedString = name.toLowerCase().replaceAll("[^a-z0-9]", "");
         for (int i = 0; i < convertedString.length() / 2; i++) {

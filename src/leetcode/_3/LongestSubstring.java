@@ -4,20 +4,18 @@ import java.util.HashSet;
 
 public class LongestSubstring {
     public static void main(String[] args) {
-        String s = " ";
+        String s = "12341";
         System.out.println(lengthOfLongestSubstring(s));
     }
 
-    public static int lengthOfLongestSubstring(String s) {
-        System.out.println(s.isEmpty());
+    public static int lengthOfLongestSubstring(String s) {  
         if (s.isEmpty()) {
-            return s.length() ;
+            return s.length();
         }
         HashSet<Character> hashSet = new HashSet<>();
         int left = 0;
-        int right = 1;
+        int right = 0;
         int longestSubstring = 0;
-        hashSet.add(s.charAt(left));
         while (right < s.length()) {
             if (hashSet.contains(s.charAt(right))) {
                 longestSubstring = Math.max(right - left, longestSubstring);

@@ -1,4 +1,4 @@
-package salah.sorting;
+package dsa_everything.sorting;
 
 public class CountingSort {
     // Find the largest element in an array

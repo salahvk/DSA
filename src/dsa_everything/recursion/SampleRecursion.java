@@ -1,4 +1,4 @@
-package salah.recursion;
+package dsa_everything.recursion;
 
 public class SampleRecursion {
     public static void main(String[] args) {

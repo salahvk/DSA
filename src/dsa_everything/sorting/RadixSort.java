@@ -1,4 +1,4 @@
-package salah.sorting;
+package dsa_everything.sorting;
 
 public class RadixSort {
     // Function to perform counting sort on arr[] according to the digit represented by place

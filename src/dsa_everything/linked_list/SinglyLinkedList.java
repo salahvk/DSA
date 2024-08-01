@@ -9,10 +9,18 @@ public class SinglyLinkedList {
         list.addNode(5);
         list.addNode(7);
         list.addNode(9);
+        list.addNode(10);
         list.addNode(11);
 
-        //  display nodes
+        // display nodes
         list.displayNodes();
+
+        // add a node after value 9
+        list.addAfter(10, 9);
+
+        // display nodes
+        list.displayNodes();
+
     }
 
     public class Node {
@@ -38,11 +46,32 @@ public class SinglyLinkedList {
         tail = newNode;
     }
 
+    public void addAfter(int data, int nextTo) {
+        Node temp = head;
+        Node newNode = new Node(data);
+        while (temp != null && temp.data != nextTo) {
+            temp = temp.next;
+        }
+        if (temp == null) {
+            System.out.println("No nextTo value found");
+            return;
+        }
+        if (temp == tail) {
+            tail.next = newNode;
+            tail = newNode;
+        }
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
+
+    
+
     public void displayNodes() {
         Node temp = head;
         while (temp != null) {
-           System.out.println(temp.data);   
-           temp = temp.next; 
+            System.out.print(temp.data + " ");
+            temp = temp.next;
         }
+        System.out.println();
     }
 }

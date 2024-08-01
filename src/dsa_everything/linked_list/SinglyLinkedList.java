@@ -21,6 +21,12 @@ public class SinglyLinkedList {
         // display nodes
         list.displayNodes();
 
+        // modify 5 containing node
+        list.modifyNode(100, 5);
+
+        // display nodes
+        list.displayNodes();
+
     }
 
     public class Node {
@@ -64,7 +70,21 @@ public class SinglyLinkedList {
         temp.next = newNode;
     }
 
-    
+    public void modifyNode(int data, int modifyingData) {
+        Node newNode = new Node(data);
+        Node temp = head;
+        while (temp != null && temp.data != modifyingData) {
+            temp = temp.next;
+        }
+        if (temp == null) {
+            System.out.println("No modifying data found");
+            return;
+        }
+        if (temp == tail) {
+            tail = newNode;
+        }
+        temp.data = data;
+    }
 
     public void displayNodes() {
         Node temp = head;

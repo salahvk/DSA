@@ -1,4 +1,4 @@
-package dsa_everything.linked_list;
+package dsa_everything.linked_list.singly_linked_list;
 
 public class SinglyLinkedList {
     public static void main(String[] args) {
@@ -27,6 +27,12 @@ public class SinglyLinkedList {
         // display nodes
         list.displayNodes();
 
+        // removing node 100 and 11
+        list.removeNode(100);
+        list.removeNode(11);
+
+        // display nodes
+        list.displayNodes();
     }
 
     public class Node {
@@ -84,6 +90,34 @@ public class SinglyLinkedList {
             tail = newNode;
         }
         temp.data = data;
+    }
+
+    public void removeNode(int data) {
+        Node temp = head;
+        Node previous = null;
+
+        if (head.data == data) {
+            head = head.next;
+            return;
+        }
+
+        while (temp != null && temp.data != data) {
+            previous = temp;
+            temp = temp.next;
+        }
+
+        if (temp == null) {
+            System.out.println("Nothing To Remove");
+            return;
+        }
+
+        if (temp == tail) {
+            previous.next = null;
+            tail = previous;
+        }
+
+        previous.next = temp.next;
+
     }
 
     public void displayNodes() {

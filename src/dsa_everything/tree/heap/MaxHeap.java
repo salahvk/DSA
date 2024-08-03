@@ -3,7 +3,7 @@ package dsa_everything.tree.heap;
 import java.util.Arrays;
 
 public class MaxHeap {
-    // You will get an array heapify it
+    // You will get an array heapify it (Max)
 
     public static void main(String[] args) {
         int[] arr = { 5, 2, 6, 32, 16, 7, 2, 7, 45, 745, 7, 9 };

@@ -4,4 +4,5 @@ public class Heap {
     //  heapify -> min heap and max heap
     //  delete
     //  Peek (Find max/min)
+    //  heap push
 }

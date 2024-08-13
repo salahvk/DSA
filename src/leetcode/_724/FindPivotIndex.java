@@ -2,24 +2,19 @@ package leetcode._724;
 
 public class FindPivotIndex {
     public static int pivotIndex(int[] nums) {
-        int i = 0;
-        int j = nums.length - 1;
-        int leftSum = nums[i];
-        int rightSum = nums[j];
+        int leftSum = 0;
+        int totalSum = 0;
 
-        while (i < j) {
-            if (leftSum == rightSum) {
-                return nums[i];
-            } else if (leftSum > rightSum) {
-                rightSum = +nums[j];
-                j--;
+        for (int i = 0; i < nums.length; i++) {
+            totalSum += nums[i];
+        }
 
-            } else if (leftSum < rightSum) {
-                leftSum = +nums[i];
-                i++;
+        for (int i = 0; i < nums.length; leftSum += nums[i++]) {
+            if (leftSum * 2 == totalSum - nums[i]) {
+                return i;
             }
         }
-        return nums[i];
+        return -1;
     }
 
     public static void main(String[] args) {

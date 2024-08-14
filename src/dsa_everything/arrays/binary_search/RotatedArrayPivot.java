@@ -15,7 +15,7 @@ public class RotatedArrayPivot {
                 e = m;
             }
         }
-        return s;
+        return e;
     }
 
     // things i do wrong
@@ -24,6 +24,8 @@ public class RotatedArrayPivot {
     // bigger that arr[e] and smaller than arr[s]
     // 2 -putting equal sign in s<e
     // 3 -returning mid
+
+    // you can return either start or end no problem in it both will be same
 
     public static void main(String[] args) {
         RotatedArrayPivot solution = new RotatedArrayPivot();

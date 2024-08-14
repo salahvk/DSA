@@ -9,13 +9,13 @@ public class BinarySearch {
 
         while (s <= e) {
             m = s + (e - s) / 2;
-            if (arr[m] == target) {
-                return m;
-            }
+
             if (arr[m] > target) {
                 e = m - 1;
-            } else {
+            } else if (arr[m] < target) {
                 s = m + 1;
+            } else {
+                return m;
             }
         }
         return -1;
@@ -24,6 +24,7 @@ public class BinarySearch {
 
     // things i did wrong at first was putting end as arr.length only and did not
     // thinking about the condition where s may be equal to e While(s<=e)
+    // I can also modify binary search adding one else if and one else condition
 
     public static void main(String[] args) {
         BinarySearch solution = new BinarySearch();

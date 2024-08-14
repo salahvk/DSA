@@ -5,34 +5,25 @@ public class RotatedArrayPivot {
     int findPivotIndex(int[] arr) {
         int s = 0;
         int e = arr.length - 1;
+        int m = 0;
         while (s < e) {
-            int m = s + (e - s) / 2;
+            m = s + (e - s) / 2;
 
-            if (arr[m] < arr[s]) {
-                e = m;
-            } else {
+            if (arr[m] > arr[e]) {
                 s = m + 1;
+            } else {
+                e = m;
             }
         }
         return s;
     }
 
-    // int findPivotIndex(int[] array) {
-    // int left = 0;
-    // int right = array.length - 1;
-
-    // while (left < right) {
-    // int mid = left + (right - left) / 2;
-
-    // if (array[mid] > array[right]) {
-    // left = mid + 1;
-    // } else {
-    // right = mid;
-    // }
-    // }
-
-    // return left;
-    // }
+    // things i do wrong
+    // 1 - putting arr[s] instead of arr[e]
+    // every integer is less than arr[s] but every integer in rotated array is
+    // bigger that arr[e] and smaller than arr[s]
+    // 2 -putting equal sign in s<e
+    // 3 -returning mid
 
     public static void main(String[] args) {
         RotatedArrayPivot solution = new RotatedArrayPivot();

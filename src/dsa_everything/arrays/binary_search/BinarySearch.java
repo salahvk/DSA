@@ -17,7 +17,6 @@ public class BinarySearch {
             } else {
                 s = m + 1;
             }
-
         }
         return -1;
 

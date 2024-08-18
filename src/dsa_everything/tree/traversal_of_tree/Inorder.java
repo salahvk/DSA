@@ -9,7 +9,7 @@ class Node {
     }
 }
 
-public class Inorder {
+public class InOrder {
 
     public static void inorderTraversal(Node node) {
         if (node == null) {

@@ -100,9 +100,6 @@ class BSTree {
 
         System.out.println("Is 40 present in the BST? " + bst.search(40)); // Output: false
 
-        // In-Order Traversal (For displaying the BST)
-        System.out.print("In-Order Traversal of the BST: ");
-        // inOrderTraversal(bst.root); // Expected Output: 30 40 50 60 70 80
 
     }
 

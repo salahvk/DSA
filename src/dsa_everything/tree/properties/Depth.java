@@ -6,7 +6,7 @@ public class Depth {
     // function to calculate depth of a tree
     TreeNode root;
 
-    static int depth(TreeNode node) {
+    public  int depth(TreeNode node) {
         if (node == null) {
             return 0;
         }

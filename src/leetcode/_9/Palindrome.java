@@ -2,8 +2,7 @@ package leetcode._9;
 
 public class Palindrome {
     // There are 4 ways to solve this problem
-    // 1:- 1. String Conversion Approach (Simple but Memory Intensive)
-    // 2 :-
+    // Use iteration with Time complexity of O(log n) which is best
     public boolean isPalindrome(int x) {
         if (x < 0) {
             return false;
@@ -18,8 +17,15 @@ public class Palindrome {
         return reversedNumber == x;
     }
 
+    // This solution only uses O(log n) TC
+
+    // public boolean isPalindrome2(int x) {
+    //     if (x < 0 || (x != 0 && x % 10 == 0))
+    //         return false;
+    // }
+
     public static void main(String[] args) {
         Palindrome palindrome = new Palindrome();
-        System.out.println(palindrome.isPalindrome(121));
+        // System.out.println(palindrome.isPalindrome());
     }
 }

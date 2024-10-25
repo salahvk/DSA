@@ -1,41 +1,38 @@
+package leetcode._2;
 class ListNode {
     int val;
     ListNode next;
 
-    ListNode(int x) {
-        val = x;
+    ListNode() {
+    }
+
+    ListNode(int val) {
+        this.val = val;
+    }
+
+    ListNode(int val, ListNode next) {
+        this.val = val;
+        this.next = next;
     }
 }
 
 public class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode dummyHead = new ListNode(0); // Dummy node to start the result list
-        ListNode p = l1, q = l2, current = dummyHead;
-        int carry = 0; // To handle carry over
+        ListNode dummy = new ListNode();
+        ListNode current = dummy;
+        int carry = 0;
+        while (l1 != null || l2 != null || carry != 0) {
+            int v1 = l1 != null ? l1.val : 0;
+            int v2 = l2 != null ? l2.val : 0;
+            int value = (v1 + v2) + carry;
+            carry = value / 10;
+            value = value % 10;
+            current.next = new ListNode(value);
 
-        // Traverse both linked lists
-        while (p != null || q != null) {
-            int x = (p != null) ? p.val : 0;
-            int y = (q != null) ? q.val : 0;
-            int sum = carry + x + y;
-
-            carry = sum / 10; // Carry for the next iteration
-            current.next = new ListNode(sum % 10); // Create a new node with the digit
             current = current.next;
-
-            // Move to the next nodes
-            if (p != null)
-                p = p.next;
-            if (q != null)
-                q = q.next;
+            l1 = l1 != null ? l1.next : null;
+            l2 = l2 != null ? l2.next : null;
         }
-
-        // If there's still a carry, add a new node for it
-        if (carry > 0) {
-            current.next = new ListNode(carry);
-        }
-
-        // Return the result list, skipping the dummy node
-        return dummyHead.next;
+        return dummy.next;
     }
 }
